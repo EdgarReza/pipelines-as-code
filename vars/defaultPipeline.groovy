@@ -7,6 +7,7 @@ def call(Map pipelineParams) {
                 agent any
                 steps {
                     script {
+                        bat './gradlew.bat test'
                         module_Maven('clean verify')
                     }
                 }
