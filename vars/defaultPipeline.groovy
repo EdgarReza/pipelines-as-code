@@ -26,12 +26,6 @@ def call(Map pipelineParams) {
                 }
             }
         }
-        post {
-            always {
-                script {
-                    module_Notification.sendEmail(currentBuild.result)
-                }
-            }
-        }
+        
     }
 }
