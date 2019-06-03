@@ -4,7 +4,7 @@ def call(Map pipelineParams) {
 
         stages {
             stage('Build and Unit test') {
-                agent { label 'maven' }
+                
                 steps {
                     script {
                         module_Maven('clean verify')
@@ -17,7 +17,7 @@ def call(Map pipelineParams) {
                 }
             }
             stage('Publish to Nexus') {
-                agent { label 'maven' }
+                
                 steps {
                     script {
                         echo "This is where we publish to Nexus"
